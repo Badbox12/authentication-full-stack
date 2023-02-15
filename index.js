@@ -100,7 +100,10 @@ app.post('/login', (req, res) => {
 app.get("/auth-endpoint",auth, (request, response) => {
      response.json({ message: "You are authorized to access me" });
    });
-
+// free endpoint
+app.get("/free-endpoint", (request, response) => {
+     response.json({ message: "You are free to access me anytime" });
+   });
 
 app.listen(process.env.PORT, ()=>{
     console.log(`server running on port ${process.env.PORT} `)
